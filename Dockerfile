@@ -56,7 +56,7 @@ RUN set -xe \
 	&& tar -zxC /usr/src -f nginx.tar.gz \
 	&& rm nginx.tar.gz \
 	&& cd /usr/src/nginx-$NGINX_VERSION \
-	&& export CFLAGS="-fstack-protector-strong -fpic -fpie -O3 -m64 -march=broadwell -mtune=generic -DTCP_FASTOPEN=23" \
+	&& export CFLAGS="-fstack-protector-strong -fpic -fpie -O3 -m64" \
 						LDFLAGS="-Wl,-O1 -Wl,--hash-style=both -pie" \
 	&& ./configure $CONFIG --with-debug \
 	&& make -j$(getconf _NPROCESSORS_ONLN) \
