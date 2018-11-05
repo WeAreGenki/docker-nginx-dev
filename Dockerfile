@@ -1,6 +1,6 @@
 # Nginx web server and reverse proxy for general purpose use
 
-FROM alpine:3.7@sha256:a52b4edb6240d1534d54ee488d7cf15b3778a5cfd0e4161d426c550487cddc5d
+FROM alpine:3.8@sha256:621c2f39f8133acb8e64023a94dbdf0d5ca81896102b9e57c0dc184cadaf5528
 
 RUN set -xe \
 	&& NGINX_VERSION=1.11.10 \
